@@ -7,22 +7,95 @@
 
   <!-- First style sheet-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="styles.css">
   
-</head>
-<body>
-  <div class="links-container">
+  <div class="top-right-link">
     <a href="google advanced search.html">Google Advanced Search</a>
     <a href="google image search.html">Google Image Search</a>
   </div>
-  <h1>Just for fun</h1>
 
-  <img src="google_image.jpg" alt="google_image" width="300" >
-  <form action="https://www.google.com/search" method="get" target="_blank">
-    <input type="text" name="q">
-    <input type="submit" value="Search">
-  </form>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
+    .search-container {
+        text-align: center;
+        position: relative;
+    }
+
+    .search-box {
+        padding: 10px;
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+
+    .top-right-link {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: #000; /* Set the color you want for the link */
+            font-weight: bold;
+        }
+        #form-group {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            width: 400px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            position: absolute;
+            top: 100;
+            right: 0;
+            padding: 10px 15px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 17px;
+        }
+</style>
+  
+</head>
+<body>
+  <div class="search-container">
+    <img src="google_image.jpg" alt="google_image" width="300" style="padding: 1%; border-radius: 50px; overflow: hidden;">
+    <form action="https://www.google.com/search" method="get" target="_blank">
+      <input type="text" name="q" id="form-group">
+      <input type="submit" value="Search" class="search-button">
+      <br>
+      <button type="button" value="Search"  style="padding: 1%; border: 1px solid #ccc; border-radius: 10px; margin-top: 10pt; width:15cqi;" onclick="feelingLucky()">I' am feeling lucky</button>
+      
+    </form>
+    <script>
+      function feelingLucky() {
+          // Get the search query from the input field
+          var query = document.querySelector('input[name="q"]').value;
+
+          // Redirect to the first Google search result for the query
+          window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
+      }
+  </script>
+  </div>
 </body>
 </html>
