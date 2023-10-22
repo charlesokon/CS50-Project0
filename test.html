@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google I'm Feeling Lucky</title>
+    <title>Colored Characters in HTML</title>
+    <style>
+        .black { color: black; }
+        .red { color: red; }
+        .purple { color: purple; }
+    </style>
 </head>
 <body>
 
-    <form id="searchForm" action="https://www.google.com/search" method="GET">
-        <input type="text" name="q" placeholder="Search...">
-        <input type="submit" value="Google Search">
-        <br>
-        <input type="button" value="I'm Feeling Lucky" onclick="feelingLucky()">
-    </form>
-
-    <script>
-        function feelingLucky() {
-            // Get the search query from the input field
-            var query = document.querySelector('input[name="q"]').value;
-
-            // Redirect to the first Google search result for the query
-            window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
-        }
-    </script>
+    <p>
+        <span class="black">R</span>
+        <span class="red">a</span>
+        <span class="purple">t</span>
+    </p>
 
 </body>
 </html>
