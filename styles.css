@@ -1,0 +1,39 @@
+/* Add your preferred styles */
+.links-container {
+  margin-bottom: 20px; /* Adjust the margin to control the space between links */
+}
+
+/* Optional styling for links */
+.links-container a {
+  text-decoration: none; /* Remove underlines */
+  color: #333; /* Set link color */
+  float: right; /* Floats the links to the right */
+  margin-left: 20px; /* Add right margin to create space between links */
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the form id*/
+#search-form {
+    max-width: 6000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style for the index body*/
+  .links-containers a {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
